@@ -1,0 +1,26 @@
+# Data files
+*.fits
+*.fits.gz
+data/
+
+# Python cache & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# LaTeX Auxiliary Files
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
