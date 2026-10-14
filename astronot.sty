@@ -1,0 +1,74 @@
+% =====================================================================
+%  astronot.sty  --  house style for Astro-Not practical reports
+%
+%  Everything to do with margins, fonts, headers and shorthand macros
+%  lives here so that main.tex stays readable. You should not need to
+%  change this file. If you do change it, say so in your report.
+% =====================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{astronot}[2026/08/18 Astro-Not practical report style]
+
+% ---------- page ------------------------------------------------------
+\RequirePackage[a4paper,top=2.6cm,bottom=2.6cm,left=3cm,right=3cm]{geometry}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{mathptmx}          % Times text + matching maths
+
+% ---------- maths, figures, tables ------------------------------------
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{xcolor}
+\RequirePackage[font=small,labelfont=md,width=0.92\textwidth]{caption}
+\RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage{fancyhdr}
+\RequirePackage[colorlinks=true,linkcolor=black,citecolor=black,%
+                urlcolor=blue!60!black]{hyperref}
+
+\graphicspath{{figures/}}
+\setlength{\parindent}{1.2em}
+\setlength{\emergencystretch}{2em}
+
+% ---------- running head ---------------------------------------------
+% Overwrite this in main.tex with \renewcommand{\reportshorttitle}{...}
+\newcommand{\reportshorttitle}{Mapping the Milky Way's rotation curve}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape\reportshorttitle}
+\fancyhead[R]{\small\scshape Astro-Not}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+% ---------- placeholder marker ---------------------------------------
+% \ph{...} prints a grey bracketed prompt. Every one of these must be
+% gone before the report is handed in. Search the source for "\ph{".
+\definecolor{anph}{gray}{0.45}
+\newcommand{\ph}[1]{%
+  \ifmmode
+    \text{\normalfont\color{anph}\itshape[#1]}%
+  \else
+    {\color{anph}\itshape[#1]}%
+  \fi}
+
+% ---------- shorthand used throughout ---------------------------------
+\newcommand{\HI}{H\,\textsc{i}}
+\newcommand{\kms}{\ensuremath{\mathrm{km\,s^{-1}}}}
+\newcommand{\kpc}{\ensuremath{\mathrm{kpc}}}
+\newcommand{\Msun}{\ensuremath{M_{\odot}}}
+\newcommand{\Rzero}{\ensuremath{R_{0}}}
+\newcommand{\Tzero}{\ensuremath{\Theta_{0}}}
+\newcommand{\Rtan}{\ensuremath{R_{\mathrm{tan}}}}
+\newcommand{\dtan}{\ensuremath{d_{\mathrm{tan}}}}
+\newcommand{\vterm}{\ensuremath{v_{\mathrm{term}}}}
+\newcommand{\vlsr}{\ensuremath{v_{\mathrm{LSR}}}}
+\newcommand{\Tthr}{\ensuremath{T_{\mathrm{thr}}}}
+\newcommand{\Tedge}{\ensuremath{T_{\mathrm{edge}}}}
+\newcommand{\TB}{\ensuremath{T_{B}}}
+\newcommand{\degr}{\ensuremath{^{\circ}}}
+
+\endinput
