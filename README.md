@@ -1,6 +1,7 @@
 # Mapping the Milky Way's Rotation Curve from the 21 cm Line of Neutral Hydrogen
 
 ## Overview
+Baseline HI4PI data extraction pipeline provided by ASTRO-NOT; empirical threshold calibration and physical kinematic analysis implemented by Atul Suresh.
 This repository contains a Python data pipeline and the accompanying LaTeX project files for mapping the kinematics of the Milky Way Galaxy. The project analyzes 21 cm emission data from the HI4PI all-sky survey to derive the rotation curve of the inner Milky Way and estimate its enclosed dynamical mass. 
 
 **Author:** Atul K Suresh  
